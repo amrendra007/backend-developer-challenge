@@ -31,13 +31,13 @@ NODE_ENV=development
 
 ## Setting up client app
 
--npm install
--npm start
+1. npm install
+2. npm start
 
 ## Setting up server app
 
--npm install
--npm start
+1. npm install
+2. npm start
 
 
 ## Deployed link: 
