@@ -8,10 +8,8 @@ const getDisbursementReport = async (req, res, next) => {
     if (!isValidResponse.valid) {
       return res.status(422).json({ success: false, message: isValidResponse.message });
     }
-    // const exchangeRate = await getExchangeRate(baseCurrency)
-
-    const exchangeRate = {rates: {}}
-
+    const exchangeRate = await getExchangeRate(baseCurrency)
+    
     const reportData = getReportData(data, exchangeRate.rates);
     res.status(200).json({ success: true, data: reportData });
   } catch (error) {
