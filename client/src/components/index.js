@@ -14,7 +14,8 @@ class DataUpload extends Component {
       data: [],
       valid: false,
       errorMessage: '',
-      baseCurrency: 'USD'
+      baseCurrency: 'USD',
+      loading: false,
     };
   }
 
@@ -146,20 +147,22 @@ class DataUpload extends Component {
         return false;
       }
 
+      this.setState({loading: true})
+
       const response = await getDisbursementReport({
         data: this.state.data,
         baseCurrency: this.state.baseCurrency
       });
 
       if (!response.success) {
-        this.setState({ errorMessage: response.message });
+        this.setState({ errorMessage: response.message, loading: false });
         return;
       }
-
+      this.setState({loading: false})
       const data = response.data;
       this.csvSheetConstructor(data);
     } catch (error) {
-      this.setState({ errorMessage: error.message });
+      this.setState({ errorMessage: error.message , loading: false});
     }
   };
 
@@ -173,6 +176,7 @@ class DataUpload extends Component {
         errorMessage={this.state.errorMessage}
         baseCurrency={this.state.baseCurrency}
         currencyOption={currencyOption}
+        loading={this.state.loading}
       />
     );
   }

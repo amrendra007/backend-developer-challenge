@@ -16,3 +16,30 @@ Create a disbursement report from a list of donations in CSV.
 - Include instructions on how to set it up and run in the README.md
 - Add your resume and other profile / project links
 - Submit a pull request (PR)
+
+### Instructions
+
+This project has two two folder in it, client and server
+
+### How to set up locally
+
+Create `.env` file at the root of the project
+
+```
+NODE_ENV=development
+```
+
+## Setting up client app
+
+-npm install
+-npm start
+
+## Setting up server app
+
+-npm install
+-npm start
+
+
+## Deployed link: 
+
+Heroku_url: <https://test-report-app-client.herokuapp.com/>

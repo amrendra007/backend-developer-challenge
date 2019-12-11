@@ -1,4 +1,5 @@
 body {
+  
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
@@ -10,4 +11,40 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.main {
+  /* padding: 10px 20px; */
+  width:45%;
+  margin:0px auto;
+  padding: 10px 50px 50px 50px;
+  box-shadow: 0px 1px 1px #999;
+  background-color: white;
+}
+label {
+  display: block;
+  font: 1rem 'Fira Sans', sans-serif;
+  margin: .4rem 0;
+  outline: none;
+}
+
+.field1 {
+  /* font-size: 30px; */
+  margin-bottom: 30px;
+}
+
+select{
+  margin-top: 10px;
+  width: 150px;
+  height: 30px;
+  padding: 20px;
+}
+
+input {
+  margin-top: 10px;
+}
+button{
+  width: 100px;
+  /* padding: 10px; */
+  
 }
